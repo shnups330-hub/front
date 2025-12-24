@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Padding Example</title>
+    <style>
+        .element {
+            background-color: #00ffff; /* Cyan/Aqua background color */
+            margin-bottom: 20px;
+            box-sizing: border-box; /* Ensures padding/border are included in element's total width/height */
+        }
+        .first {
+            padding: 40px;
+            border: 4px solid #ff0000; /* Red border */
+        }
+        .second {
+            padding: 20px;
+            border: 4px solid #00ff00; /* Green border */
+        }
+        .third {
+            padding: 10px;
+            border: 4px solid #0000ff; /* Blue border */
+        }
+    </style>
+</head>
+<body>
+    <div class="element first">
+        first element with 40px padding
+    </div>
+    <div class="element second">
+        second element with 20px padding
+    </div>
+    <div class="element third">
+        third element with 10px padding
+    </div>
+</body>
+</html>

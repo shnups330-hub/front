@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pet Form</title>
+</head>
+<body>
+  <h1>Pet Form</h1>
+
+  <form action="#" method="post">
+    <div>
+      <label for="petName">Pet name</label><br>
+      <input type="text" id="petName" name="petName" placeholder="Enter pet name" required>
+    </div>
+
+    <div>
+      <label for="petAge">Pet age</label><br>
+      <input type="number" id="petAge" name="petAge" min="0" step="1" placeholder="0" required>
+    </div>
+
+    <fieldset>
+      <legend>Pet type</legend>
+      <label>
+        <input type="radio" name="petType" value="cat" required>
+        Cat
+      </label>
+      <label>
+        <input type="radio" name="petType" value="dog">
+        Dog
+      </label>
+    </fieldset>
+
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</body>
+</html>
