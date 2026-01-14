@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Auth</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#4facfe,#00f2fe)
+}
+.card{
+width:360px;
+background:#fff;
+border-radius:16px;
+padding:30px 25px;
+box-shadow:0 15px 40px rgba(0,0,0,.2)
+}
+.tabs{
+display:flex;
+margin-bottom:20px;
+border-radius:10px;
+overflow:hidden;
+background:#f0f0f0
+}
+.tabs label{
+flex:1;
+text-align:center;
+padding:10px;
+cursor:pointer;
+font-weight:600;
+color:#555;
+transition:.3s
+}
+input[type=radio]{display:none}
+#login:checked ~ .tabs label[for=login],
+#register:checked ~ .tabs label[for=register]{
+background:#4facfe;
+color:#fff
+}
+.form{
+display:none;
+animation:fade .4s
+}
+#login:checked ~ .login-form{display:block}
+#register:checked ~ .register-form{display:block}
+.field{
+margin-bottom:14px;
+position:relative
+}
+.field input{
+width:100%;
+padding:12px 14px;
+border-radius:8px;
+border:1px solid #ddd;
+outline:none;
+font-size:14px;
+transition:.3s
+}
+.field input:focus{
+border-color:#4facfe;
+box-shadow:0 0 0 2px rgba(79,172,254,.2)
+}
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#4facfe;
+color:#fff;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s
+}
+button:hover{
+background:#2f9bff;
+transform:translateY(-1px)
+}
+.small{
+text-align:center;
+font-size:12px;
+color:#888;
+margin-top:10px
+}
+@keyframes fade{
+from{opacity:0;transform:translateY(5px)}
+to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+<div class="card">
+<input type="radio" name="tab" id="login" checked>
+<input type="radio" name="tab" id="register">
+
+<div class="tabs">
+<label for="login">Войти</label>
+<label for="register">Регистрация</label>
+</div>
+
+<form class="form login-form">
+<div class="field"><input type="text" placeholder="Username" required></div>
+<div class="field"><input type="password" placeholder="Password" required></div>
+<button>Войти</button>
+<div class="small">Добро пожаловать обратно</div>
+</form>
+
+<form class="form register-form">
+<div class="field"><input type="text" placeholder="Username" required></div>
+<div class="field"><input type="password" placeholder="Password" required></div>
+<div class="field"><input type="email" placeholder="Email" required></div>
+<div class="field"><input type="number" placeholder="Age" min="1" required></div>
+<button>Зарегистрироваться</button>
+<div class="small">Создай аккаунт за минуту</div>
+</form>
+
+</div>
+</body>
+</html
